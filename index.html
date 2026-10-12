@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yasí Travel | Remisería y Traslados — Puerto Iguazú, Misiones</title>
+<meta name="description" content="Yasí Travel: remisería y traslados en Puerto Iguazú y la Triple Frontera. Aeropuerto, turismo, viajes urbanos y excursiones. Tu viaje comienza con nosotros.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sistema-remiseria-yasi-travel.vercel.app/">
+<link rel="icon" type="image/png" href="img/yasi-isotipo.png">
+<link rel="apple-touch-icon" href="img/yasi-isotipo.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yasí Travel | Remisería y Traslados — Puerto Iguazú">
+<meta property="og:description" content="Tu viaje comienza con nosotros. Traslados, turismo y viajes urbanos en la Triple Frontera.">
+<meta property="og:image" content="https://sistema-remiseria-yasi-travel.vercel.app/img/yasi-flyer.webp">
+<meta property="og:url" content="https://sistema-remiseria-yasi-travel.vercel.app/">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#040a1a">
+<link rel="preload" as="image" href="img/cataratas-3.webp" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#040a1a; --bg2:#07112b; --card:#0b1838; --card2:#102148;
+  --gold:#E9B949; --gold2:#F7D774; --goldd:#B8862B;
+  --text:#F2F4FA; --muted:#9AA7C4; --line:rgba(233,185,73,.16); --line2:rgba(255,255,255,.08);
+  --glow:rgba(233,185,73,.28); --r:20px; --ease:cubic-bezier(.16,1,.3,1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;overflow-x:clip}
+body{font-family:'Montserrat',sans-serif;background:radial-gradient(1100px 620px at 90% 0,rgba(48,96,210,.20),transparent 62%),radial-gradient(900px 520px at -5% 38%,rgba(233,185,73,.06),transparent 62%),var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden;animation:fadein .9s ease both}
+h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.12}
+a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
+.gold{background:linear-gradient(100deg,var(--goldd),var(--gold2) 45%,var(--gold) 70%,var(--goldd));background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+@keyframes shine{to{background-position:-220% 0}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes ping{0%{transform:scale(1);opacity:.5}100%{transform:scale(2.1);opacity:0}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 var(--glow)}50%{box-shadow:0 0 0 14px transparent}}
+@keyframes sweep{from{background-position:200% 0}to{background-position:-200% 0}}
+@keyframes rise{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
+.skip{position:absolute;top:-60px;left:12px;background:var(--gold);color:#000;padding:10px 18px;border-radius:10px;font-weight:700;z-index:3000;transition:top .25s}
+.skip:focus{top:12px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 6%;position:relative;z-index:1}
+section{padding:110px 0;position:relative;overflow-x:clip}
+.alt{background:linear-gradient(180deg,var(--bg) 0,var(--bg2) 20%,var(--bg2) 80%,var(--bg) 100%)}
+section::after{content:'';position:absolute;top:0;left:50%;width:min(560px,70%);height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.45;pointer-events:none}
+section:not(.cta)::before{content:'';position:absolute;width:680px;height:440px;top:-90px;right:-180px;background:radial-gradient(closest-side,rgba(48,96,210,.17),transparent);pointer-events:none}
+.alt::before{right:auto!important;left:-200px;background:radial-gradient(closest-side,rgba(233,185,73,.08),transparent)!important}
+.eyebrow{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.hd{text-align:center;max-width:720px;margin:0 auto 54px}
+.hd h2{font-size:clamp(2rem,4.6vw,3rem);margin-bottom:12px}
+.hd p{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:15px 30px;border-radius:50px;border:none;cursor:pointer;font:700 .78rem 'Montserrat',sans-serif;letter-spacing:1.4px;text-transform:uppercase;transition:all .4s var(--ease);position:relative;overflow:hidden}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold) 55%,var(--goldd));color:#1a1203;box-shadow:0 6px 26px var(--glow);animation:pulse 2.8s infinite}
+.btn-gold::after{content:'';position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.5) 50%,transparent 70%);background-size:200% 100%;background-position:200% 0;opacity:0}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 14px 38px var(--glow)}
+.btn-gold:hover::after{opacity:1;animation:sweep 1.1s ease}
+.btn-line{background:transparent;color:var(--text);border:1.5px solid var(--line);}
+.btn-line:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px);background:linear-gradient(135deg,rgba(233,185,73,.14),transparent)}
+.rv,.rv-l,.rv-r,.rv-z{opacity:0;transition:opacity .9s var(--ease),transform .9s var(--ease),filter .9s var(--ease);filter:blur(6px)}
+.rv{transform:translateY(34px)} .rv-l{transform:translateX(-50px)} .rv-r{transform:translateX(50px)} .rv-z{transform:scale(.94)}
+.rv.on,.rv-l.on,.rv-r.on,.rv-z.on{opacity:1;transform:none;filter:none}
+.hd h2::after{content:'';display:block;width:0;height:3px;margin:16px auto 0;border-radius:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transition:width 1.1s .3s var(--ease)}
+.hd.on h2::after{width:120px}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--goldd),var(--gold2),var(--gold));z-index:3000;box-shadow:0 0 12px var(--glow)}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+@keyframes down{from{opacity:0;transform:translateY(-100%)}to{opacity:1;transform:none}}
+@keyframes mqr{from{transform:translateX(-50%)}to{transform:none}}
+.spot{position:relative}
+.spot::before{content:'';position:absolute;inset:0;border-radius:inherit;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(233,185,73,.14),transparent 45%);opacity:0;transition:opacity .4s;pointer-events:none;z-index:1}
+.spot:hover::before{opacity:1}
+.mq{overflow:hidden;padding:26px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.mq-t{display:flex;gap:46px;width:max-content;animation:mqr 46s linear infinite}
+.mq:hover .mq-t{animation-play-state:paused}
+.mq span{font:700 .78rem 'Montserrat',sans-serif;letter-spacing:4px;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.mq span::after{content:'✦';margin-left:46px;color:var(--gold)}
+.links a.act{color:var(--text)} .links a.act::after{width:100%}
+
+/* NAV */
+#nav{position:fixed;inset:0 0 auto 0;z-index:1200;padding:14px 0;transition:all .4s var(--ease);animation:down .9s var(--ease) both}
+#nav.sc{background:rgba(4,10,26,.88);backdrop-filter:blur(16px);padding:8px 0;border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{width:44px;height:44px;object-fit:contain;transform:translateY(-1px);filter:drop-shadow(0 0 10px var(--glow))}
+.brand b{font:900 1.35rem 'Playfair Display',serif;letter-spacing:2px;line-height:1}
+.brand small{display:block;font:600 .55rem 'Montserrat',sans-serif;letter-spacing:5px;color:var(--gold);margin-top:2px}
+.links{display:flex;gap:28px;list-style:none}
+.links a{font-size:.74rem;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);position:relative;transition:color .3s}
+.links a::after{content:'';position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--gold);transition:width .35s var(--ease)}
+.links a:hover{color:var(--text)} .links a:hover::after{width:100%}
+.nav-r{display:flex;align-items:center;gap:12px}
+.lang{display:flex;border:1px solid var(--line);border-radius:50px;overflow:hidden}
+.lang button{background:none;border:none;color:var(--muted);font:700 .68rem 'Montserrat',sans-serif;padding:7px 11px;cursor:pointer;transition:.3s}
+.lang button.on{background:var(--gold);color:#1a1203}
+.burger{display:none;background:none;border:1px solid var(--line);color:var(--gold);width:42px;height:42px;border-radius:12px;font-size:1.2rem;cursor:pointer}
+.mnav{position:fixed;inset:0 0 0 auto;width:min(80vw,320px);background:var(--bg2);z-index:1100;padding:90px 30px;display:flex;flex-direction:column;gap:22px;transform:translateX(100%);transition:transform .5s var(--ease);border-left:1px solid var(--line)}
+.mnav{visibility:hidden;transition:transform .5s var(--ease),visibility 0s .5s}
+.mnav.open{transform:none;visibility:visible;transition:transform .5s var(--ease),visibility 0s}
+.mnav a{font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:.85rem;color:var(--muted)}
+.mnav a:hover{color:var(--gold)}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 90px;overflow:hidden;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-2}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:kb 22s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.18) translate(-1.5%,-1%)}}
+.hero::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(4,10,26,.96) 8%,rgba(4,10,26,.78) 48%,rgba(4,10,26,.45)),linear-gradient(0deg,var(--bg),transparent 30%)}
+.hero-in{max-width:760px}
+.hero .eyebrow{animation:rise .9s .5s var(--ease) both}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);margin-bottom:22px;animation:rise .9s .62s var(--ease) both}
+.hero h1 .gold{display:inline-block}
+.hero p{font-size:1.08rem;color:#c5cee6;max-width:560px;margin-bottom:36px;animation:rise .9s .74s var(--ease) both}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;animation:rise .9s .86s var(--ease) both}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px;animation:rise .9s 1s var(--ease) both}
+.chip{display:flex;align-items:center;gap:8px;padding:9px 16px;border-radius:50px;background:rgba(11,24,56,.7);border:1px solid var(--line);font-size:.76rem;font-weight:600;backdrop-filter:blur(8px)}
+.chip i{font-style:normal;color:var(--gold)}
+.dot{width:8px;height:8px;border-radius:50%;background:#2ECC71;animation:ping2 2s infinite}
+@keyframes ping2{0%,100%{box-shadow:0 0 0 0 rgba(46,204,113,.55)}50%{box-shadow:0 0 0 7px transparent}}
+
+/* STRIP */
+.strip{padding:0;margin-top:-1px;background:linear-gradient(90deg,transparent,rgba(16,33,72,.85) 30%,rgba(16,33,72,.85) 70%,transparent);border-block:1px solid var(--line);overflow:visible}
+.strip::before,.strip::after{display:none}
+.strip-g{display:grid;grid-template-columns:repeat(4,1fr)}
+.st{padding:30px 14px;text-align:center;border-right:1px solid var(--line2)}
+.st:last-child{border:none}
+.st b{display:block;font:900 2rem 'Playfair Display',serif}
+.st span{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+
+/* SERVICES */
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.svc{position:relative;height:420px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line2);transition:all .5s var(--ease)}
+.svc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.svc::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,10,26,.96) 8%,rgba(4,10,26,.35) 62%,transparent)}
+.svc>div{position:absolute;inset:auto 0 0 0;padding:26px;z-index:2}
+.svc .ic{font-size:1.6rem;margin-bottom:6px}
+.svc h3{font-size:1.3rem;margin-bottom:6px}
+.svc p{font-size:.86rem;color:#c5cee6}
+.svc:hover{transform:translateY(-10px);border-color:var(--gold);box-shadow:0 22px 50px rgba(0,0,0,.5),0 0 0 1px var(--line)}
+.svc:hover img{transform:scale(1.1)}
+
+/* WHY */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.wc{background:var(--card);border:1px solid var(--line2);border-radius:var(--r);padding:32px 24px;text-align:center;transition:all .45s var(--ease)}
+.wc:hover{transform:translateY(-8px);border-color:var(--gold);box-shadow:0 18px 44px rgba(0,0,0,.4)}
+.wc .ic{font-size:2.1rem;display:inline-block;margin-bottom:12px;transition:transform .4s var(--ease)}
+.wc:hover .ic{transform:scale(1.2) rotate(-6deg)}
+.wc h3{font-size:1.1rem;margin-bottom:8px}
+.wc p{font-size:.86rem;color:var(--muted)}
+
+/* VEHICLE */
+.veh{display:grid;grid-template-columns:1fr 1.15fr;gap:54px;align-items:center}
+.veh h2{font-size:clamp(2rem,4.4vw,2.9rem);margin-bottom:16px}
+.veh p{color:var(--muted);margin-bottom:26px}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.spec{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.spec small{display:block;font-size:.66rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+.spec b{font-size:.98rem}
+.vg{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:260px 190px;gap:12px}
+.vg img{width:100%;height:100%;object-fit:cover;border-radius:16px;border:1px solid var(--line2);transition:transform .6s var(--ease)}
+.vg img:first-child{grid-column:1/-1}
+.vg img:hover{transform:scale(1.02)}
+
+/* PACKAGES */
+.pk{background:var(--card);border:1px solid var(--line2);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:all .5s var(--ease)}
+.pk:hover{transform:translateY(-10px);border-color:var(--gold);box-shadow:0 22px 50px rgba(0,0,0,.5)}
+.pk .th{position:relative;height:200px;overflow:hidden}
+.pk .th img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.pk .th::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,var(--card) 0,rgba(11,24,56,.35) 38%,transparent 70%);pointer-events:none}
+.pk .tag{z-index:2}
+.pk:hover .th img{transform:scale(1.12)}
+.pk .tag{position:absolute;top:12px;right:12px;background:rgba(4,10,26,.85);border:1px solid var(--line);color:var(--gold2);font-size:.66rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 12px;border-radius:50px;backdrop-filter:blur(6px)}
+.pk .bd{padding:22px;display:flex;flex-direction:column;flex:1}
+.pk h3{font-size:1.2rem;margin-bottom:8px}
+.pk p{font-size:.85rem;color:var(--muted);flex:1;margin-bottom:18px}
+.pk button{align-self:stretch;background:rgba(233,185,73,.1);border:1px solid var(--line);color:var(--gold2);padding:11px;border-radius:50px;font:700 .72rem 'Montserrat',sans-serif;letter-spacing:1.4px;text-transform:uppercase;cursor:pointer;transition:.3s}
+.pk button:hover{background:var(--gold);color:#1a1203}
+
+/* GALLERY */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:12px}
+.gal button{border:none;padding:0;border-radius:16px;overflow:hidden;cursor:zoom-in;position:relative;background:var(--card)}
+.gal button:nth-child(1){grid-column:span 2;grid-row:span 2}
+.gal button:nth-child(4),.gal button:nth-child(9),.gal button:nth-child(10){grid-column:span 2}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.gal button::after{content:'⤢';position:absolute;right:12px;bottom:10px;color:#fff;opacity:0;font-size:1.3rem;transition:.3s;text-shadow:0 2px 8px #000}
+.gal button:hover img{transform:scale(1.1)} .gal button:hover::after{opacity:1}
+.lb{position:fixed;inset:0;background:rgba(2,6,16,.94);z-index:2500;display:none;align-items:center;justify-content:center;padding:30px;cursor:zoom-out}
+.lb.open{display:flex;animation:rise .4s var(--ease)}
+.lb img{max-height:88vh;max-width:94vw;border-radius:14px;border:1px solid var(--line)}
+
+/* QUOTE */
+.qgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;max-width:1040px;margin:0 auto}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:34px}
+.panel h3{font-size:1.4rem;margin-bottom:6px}
+.panel>p{color:var(--muted);font-size:.88rem;margin-bottom:22px}
+.fg{margin-bottom:16px}
+.fg label{display:block;font-size:.68rem;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
+.fg select,.fg input{width:100%;background:var(--bg2);border:1px solid var(--line2);border-radius:12px;color:var(--text);padding:13px 15px;font:500 .92rem 'Montserrat',sans-serif;transition:border-color .3s;color-scheme:dark}
+.fg select:focus,.fg input:focus{outline:none;border-color:var(--gold)}
+.fg .oth{margin-top:8px;display:none}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.sum{display:flex;flex-direction:column}
+.sr{display:flex;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px solid var(--line2);font-size:.88rem}
+.sr span{color:var(--muted)} .sr b{text-align:right}
+.sum small{color:var(--muted);margin-top:18px;font-size:.78rem}
+.wa{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:8px;width:100%;padding:16px;border-radius:50px;background:linear-gradient(145deg,#25D366,#1DA851);color:#fff;font:700 .8rem 'Montserrat',sans-serif;letter-spacing:1.4px;text-transform:uppercase;box-shadow:0 8px 26px rgba(37,211,102,.35);transition:.35s var(--ease)}
+.wa:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(37,211,102,.5)}
+.wa svg{width:20px;fill:#fff}
+
+/* FAQ */
+.faq{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.fi{background:var(--card);border:1px solid var(--line2);border-radius:16px;overflow:hidden;transition:border-color .3s}
+.fi.open{border-color:var(--gold)}
+.fq{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;background:none;border:none;color:var(--text);font:600 .98rem 'Montserrat',sans-serif;text-align:left;cursor:pointer}
+.fq i{flex-shrink:0;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(233,185,73,.12);color:var(--gold);font-style:normal;font-size:1.15rem;transition:all .35s var(--ease)}
+.fi.open .fq i{transform:rotate(135deg);background:var(--gold);color:#1a1203}
+.fa{max-height:0;overflow:hidden;transition:max-height .45s var(--ease)}
+.fa p{padding:0 24px 20px;color:var(--muted);font-size:.9rem}
+.fi.open .fa{max-height:240px}
+
+/* LOCATION */
+.map{display:grid;grid-template-columns:1.6fr 1fr;max-width:1100px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;filter:invert(92%) hue-rotate(180deg) contrast(.88) saturate(.7)}
+.map .inf{padding:34px 28px;display:flex;flex-direction:column;gap:16px;justify-content:center}
+.map .inf div{display:flex;gap:12px;align-items:flex-start;color:var(--muted);font-size:.92rem}
+.map .inf a:hover{color:var(--gold)}
+
+/* CTA */
+.cta{text-align:center;overflow:hidden;isolation:isolate;padding:120px 0}
+.cta>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.cta::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,var(--bg) 0,rgba(4,10,26,.82) 24%,rgba(4,10,26,.78) 76%,#020611 100%)}
+.cta img.lg{width:96px;margin:0 auto 18px;animation:float 3.6s ease-in-out infinite;filter:drop-shadow(0 0 18px var(--glow))}
+.cta h2{font-size:clamp(2.2rem,5.4vw,3.8rem);margin-bottom:14px}
+.cta p{color:#c5cee6;max-width:520px;margin:0 auto 34px}
+
+footer{background:#020611;padding:60px 0 28px}
+.fg3{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
+footer h4{font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+footer li{list-style:none;margin-bottom:9px;font-size:.9rem;color:var(--muted)}
+footer li a:hover{color:var(--gold)}
+footer .bt{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+footer .bt img{width:42px;transform:translateY(-2px)}
+footer .desc{color:var(--muted);font-size:.88rem;max-width:340px}
+.copy{border-top:1px solid var(--line2);padding-top:22px;text-align:center;font-size:.78rem;color:var(--muted)}
+
+.wfl{position:fixed;right:22px;bottom:22px;z-index:1500;width:60px;height:60px;border-radius:50%;background:linear-gradient(145deg,#25D366,#1DA851);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(37,211,102,.45);animation:float 3.2s ease-in-out infinite;transition:transform .3s var(--ease)}
+.wfl:hover{transform:scale(1.12)}
+.wfl svg{width:30px;fill:#fff;position:relative;z-index:2}
+.wfl::before{content:'';position:absolute;inset:0;border-radius:50%;background:#25D366;animation:ping 2.2s ease-out infinite}
+
+@media(max-width:900px){
+  .links,.nav-r .lang{display:none}.burger{display:block}
+  .veh,.qgrid,.map,.fg3{grid-template-columns:1fr}
+  .strip-g{grid-template-columns:1fr 1fr}.st:nth-child(2){border-right:none}.st:nth-child(-n+2){border-bottom:1px solid var(--line2)}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:170px}.gal button:nth-child(1){grid-column:span 2}.gal button:nth-child(4){grid-column:span 2}
+  section{padding:72px 0}
+}
+@media(max-width:560px){.row2{grid-template-columns:1fr}.vg{grid-template-rows:200px 150px}.wfl{right:16px;bottom:16px;width:54px;height:54px}.panel{padding:24px}}
+.mlang{display:flex;gap:8px;margin-top:10px}
+.mlang button{background:none;border:1px solid var(--line);color:var(--muted);padding:8px 14px;border-radius:50px;font:700 .72rem 'Montserrat',sans-serif;cursor:pointer}
+.mlang button.on{background:var(--gold);color:#1a1203}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.rv-l,.rv-r,.rv-z{opacity:1;transform:none;filter:none}}
+
+/* ===== NUEVO: orbes, loader, cue, armador, extras ===== */
+::selection{background:var(--gold);color:#1a1203}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:linear-gradient(var(--goldd),var(--gold));border-radius:10px;border:2px solid var(--bg)}
+#loader{position:fixed;inset:0;z-index:5000;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px}
+#loader img{width:92px;animation:float 2.2s ease-in-out infinite;filter:drop-shadow(0 0 22px var(--glow))}
+.ld-bar{width:150px;height:3px;background:var(--line2);border-radius:3px;overflow:hidden}
+.ld-bar i{display:block;height:100%;width:40%;border-radius:3px;background:linear-gradient(90deg,var(--goldd),var(--gold2));animation:ld 1.1s ease-in-out infinite}
+@keyframes ld{from{transform:translateX(-120%)}to{transform:translateX(380%)}}
+#loader.out{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .8s .1s,visibility 0s .9s}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);z-index:-1;pointer-events:none;animation:drift 15s ease-in-out infinite alternate}
+.o1{width:420px;height:420px;background:rgba(233,185,73,.22);top:10%;right:6%}
+.o2{width:540px;height:540px;background:rgba(48,96,210,.30);bottom:-10%;left:-8%;animation-duration:19s}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(50px,-40px) scale(1.15)}}
+.cue{position:absolute;left:50%;bottom:26px;width:26px;height:42px;border:2px solid var(--line);border-radius:20px;transform:translateX(-50%);z-index:2;opacity:.85}
+.cue span{position:absolute;left:50%;top:8px;width:4px;height:8px;border-radius:3px;background:var(--gold);transform:translateX(-50%);animation:wheel 1.8s infinite}
+@keyframes wheel{0%{opacity:1;top:8px}100%{opacity:0;top:22px}}
+#top{position:fixed;left:22px;bottom:22px;z-index:1500;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:rgba(11,24,56,.85);color:var(--gold);font-size:1.2rem;cursor:pointer;backdrop-filter:blur(8px);opacity:0;transform:translateY(20px);pointer-events:none;transition:all .4s var(--ease)}
+#top.show{opacity:1;transform:none;pointer-events:auto}
+#top:hover{background:var(--gold);color:#1a1203}
+.pk .th::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.22) 50%,transparent 65%);transform:translateX(-120%);transition:transform .9s var(--ease);pointer-events:none}
+.pk:hover .th::before{transform:translateX(120%)}
+.pkgs{display:flex;flex-wrap:wrap;justify-content:center;gap:22px}
+.pkgs>.pk{flex:0 1 calc(25% - 17px);min-width:235px}
+.bq{text-align:center;margin-top:44px}
+.bld-hd{margin-top:100px}
+.bld{display:grid;grid-template-columns:1.25fr 1fr;gap:26px;max-width:1040px;margin:0 auto;align-items:start}
+.chsel{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ch{position:relative;display:flex;align-items:center;gap:11px;text-align:left;padding:14px 16px;border-radius:14px;background:var(--bg2);border:1px solid var(--line2);color:var(--text);font:600 .86rem 'Montserrat',sans-serif;cursor:pointer;transition:all .35s var(--ease)}
+.ch .ci{font-size:1.35rem;transition:transform .35s var(--ease)}
+.ch .ck{margin-left:auto;flex-shrink:0;font-style:normal;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1.5px solid var(--line);color:transparent;font-size:.75rem;transition:all .3s var(--ease)}
+.ch:hover{border-color:var(--gold);transform:translateY(-3px)}
+.ch:hover .ci{transform:scale(1.2) rotate(-6deg)}
+.ch.ot{grid-column:1/-1}
+.oth-wrap{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease),margin .45s var(--ease)}
+.oth-wrap>div{overflow:hidden}
+.oth-wrap.open{grid-template-rows:1fr;margin-top:14px}
+.ch.on{background:linear-gradient(135deg,rgba(233,185,73,.2),rgba(233,185,73,.05));border-color:var(--gold);box-shadow:0 8px 24px rgba(233,185,73,.15)}
+.ch.on .ck{background:var(--gold);border-color:var(--gold);color:#1a1203;transform:scale(1.12)}
+.bsum{position:sticky;top:96px}
+.bcount{display:flex;align-items:baseline;gap:10px;margin:6px 0 14px}
+.bcount b{font:900 2.4rem 'Playfair Display',serif;line-height:1}
+.bcount span{color:var(--muted);font-size:.85rem}
+.blist{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.pill{background:rgba(233,185,73,.14);border:1px solid var(--line);color:var(--gold2);padding:6px 12px;border-radius:50px;font-size:.76rem;font-weight:600;animation:pop .45s var(--ease) both}
+@keyframes pop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
+.bempty{color:var(--muted)!important;font-size:.85rem!important;margin-bottom:18px!important}
+@media(max-width:900px){.why{grid-template-columns:1fr 1fr}.bld{grid-template-columns:1fr}.bsum{position:static}.cue{display:none}}
+@media(max-width:560px){.why{grid-template-columns:1fr}.chsel{grid-template-columns:1fr}.pkgs>.pk{flex:1 1 100%}#top{left:16px;bottom:16px}}
+
+/* ===== choferes ===== */
+.drivers{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;max-width:900px;margin:0 auto}
+.drv{background:var(--card);border:1px solid var(--line2);border-radius:var(--r);overflow:hidden;transition:all .5s var(--ease)}
+.drv:hover{transform:translateY(-10px);border-color:var(--gold);box-shadow:0 22px 50px rgba(0,0,0,.5)}
+.dph{position:relative;aspect-ratio:4/4.3;overflow:hidden;background:linear-gradient(160deg,var(--card2),var(--bg2))}
+.dph .av{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:5rem;opacity:.3}
+.dph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .9s var(--ease)}
+.drv:hover .dph img{transform:scale(1.06)}
+.dph::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,var(--card) 0,rgba(11,24,56,.2) 40%,transparent 70%);pointer-events:none}
+.dbd{padding:0 26px 30px;position:relative;z-index:2;margin-top:-30px}
+.dbd h3{font-size:1.5rem}
+.drole{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:4px 0 12px}
+.dbd p{color:var(--muted);font-size:.9rem;margin-bottom:16px}
+.dmeta{list-style:none;display:flex;flex-direction:column;gap:8px}
+.dmeta li{display:flex;gap:10px;font-size:.84rem}.dmeta i{font-style:normal}
+@media(max-width:700px){.drivers{grid-template-columns:1fr}}
+@media(max-width:1100px){.links{gap:18px}}
+
+/* ===== pase de fotos en tarjetas ===== */
+.slides .sl{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity 1.3s ease,transform .9s var(--ease)}
+.slides .sl:first-child{opacity:1}
+.slides .sl.on{opacity:1}
+.dots{position:absolute;left:0;right:0;bottom:14px;display:flex;justify-content:center;gap:7px;z-index:3}
+.dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);transition:all .4s var(--ease)}
+.dots i.on{width:22px;border-radius:7px;background:var(--gold)}
+
+/* ===== PULIDO FINAL ===== */
+#dust{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.hero::after{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(520px circle at var(--hx,72%) var(--hy,28%),rgba(233,185,73,.13),transparent 55%);pointer-events:none}
+.hero-in{will-change:transform,opacity}
+.hd .eyebrow{display:inline-block;letter-spacing:11px;opacity:0;transition:letter-spacing 1.3s var(--ease),opacity 1s ease}
+.hd.on .eyebrow{letter-spacing:3px;opacity:1}
+.hd p{opacity:0;transform:translateY(14px);transition:opacity .9s .4s var(--ease),transform .9s .4s var(--ease)}
+.hd.on p{opacity:1;transform:none}
+.svc.rv:not(.on) img{transform:scale(1.3)}
+.pk.rv:not(.on) .th img{transform:scale(1.25)}
+.chip{transition:all .4s var(--ease)}.chip:hover{transform:translateY(-3px);border-color:var(--gold);background:rgba(16,33,72,.9)}
+.fg select:focus,.fg input:focus{box-shadow:0 0 0 4px rgba(233,185,73,.16)}
+footer li a{display:inline-block;transition:transform .35s var(--ease),color .3s}footer li a:hover{transform:translateX(6px)}
+.wa,.pk button{position:relative;overflow:hidden}
+.rip{position:absolute;border-radius:50%;background:rgba(255,255,255,.38);transform:scale(0);animation:rip .75s ease-out forwards;pointer-events:none}
+@keyframes rip{to{transform:scale(1);opacity:0}}
+@property --ang{syntax:'<angle>';initial-value:0deg;inherits:false}
+@keyframes spinb{to{--ang:360deg}}
+.pk::after,.wc::after,.drv::after{content:'';position:absolute;inset:0;border-radius:inherit;padding:1.5px;pointer-events:none;opacity:0;transition:opacity .45s;
+  background:conic-gradient(from var(--ang),transparent 0 62%,var(--gold2) 82%,transparent 100%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);mask-composite:exclude;animation:spinb 4s linear infinite}
+.pk:hover::after,.wc:hover::after,.drv:hover::after{opacity:1}
+#cur,#curd{position:fixed;top:0;left:0;pointer-events:none;z-index:4000;opacity:0;transition:opacity .3s}
+body.cur-on #cur,body.cur-on #curd{opacity:1}
+#cur{width:38px;height:38px;margin:-19px 0 0 -19px;border:1.5px solid rgba(233,185,73,.7);border-radius:50%;transition:opacity .3s,width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),background .3s,border-color .3s}
+#cur.big{width:64px;height:64px;margin:-32px 0 0 -32px;background:rgba(233,185,73,.12);border-color:var(--gold)}
+#curd{width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:var(--gold)}
+.lb img{transition:opacity .25s ease,transform .25s ease}
+.lb img.sw{opacity:0;transform:scale(.96)}
+.lbn,.lbc2{position:absolute;width:54px;height:54px;border-radius:50%;border:1px solid var(--line);background:rgba(11,24,56,.8);color:var(--gold);font-size:1.8rem;cursor:pointer;transition:all .3s var(--ease);display:flex;align-items:center;justify-content:center;line-height:1}
+.lbn{top:50%;transform:translateY(-50%)}.lbp{left:24px}.lbx{right:24px}
+.lbc2{top:22px;right:24px;width:46px;height:46px;font-size:1.1rem}
+.lbn:hover,.lbc2:hover{background:var(--gold);color:#1a1203}
+.lbn:hover{transform:translateY(-50%) scale(1.08)}
+.lbc{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:var(--muted);font-size:.8rem;letter-spacing:3px}
+@media(max-width:700px){.lbn{width:44px;height:44px;font-size:1.4rem}.lbp{left:10px}.lbx{right:10px}}
+
+/* ===== RENDIMIENTO: nada de filtros ni animaciones infinitas pesadas ===== */
+body{animation:none}
+.gold,.btn-gold{animation:none}
+.rv,.rv-l,.rv-r,.rv-z{filter:none;transition:opacity .55s var(--ease),transform .55s var(--ease)}
+.hd .eyebrow{letter-spacing:3px;opacity:0;transform:translateY(8px);transition:opacity .55s,transform .55s}
+.hd.on .eyebrow{opacity:1;transform:none}
+.hd h2::after{width:120px;transform:scaleX(0);transition:transform .7s .15s var(--ease)}
+.hd.on h2::after{transform:scaleX(1)}
+.hd p{transition:opacity .55s .1s,transform .55s .1s}
+#nav{animation:none;transition:background .3s,padding .3s,border-color .3s}
+#nav.sc{backdrop-filter:none;background:rgba(4,10,26,.96)}
+#bar{width:100%;transform:scaleX(0);transform-origin:0 50%}
+.hero-bg img{animation:none;transform:none}
+.hero::after{display:none}
+.hero-in{will-change:auto}
+.hero .eyebrow{animation:rise .6s var(--ease) both}
+.hero h1{animation:rise .6s .08s var(--ease) both}
+.hero p{animation:rise .6s .16s var(--ease) both}
+.hero-cta{animation:rise .6s .24s var(--ease) both}
+.chips{animation:rise .6s .32s var(--ease) both}
+.orb{filter:none;animation:none}
+.o1{background:radial-gradient(closest-side,rgba(233,185,73,.22),transparent)}
+.o2{background:radial-gradient(closest-side,rgba(48,96,210,.32),transparent)}
+.chip,.pk .tag,#top{backdrop-filter:none}
+.dot{animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
+.svc.rv:not(.on) img,.pk.rv:not(.on) .th img{transform:none}
+.pk::after,.wc::after,.drv::after{display:none}
+#cur,#curd,#loader,#dust{display:none}
+.map iframe{filter:none}
+.drivers{display:flex;flex-wrap:wrap;justify-content:center;gap:28px;max-width:900px}
+.drv{flex:0 1 420px;min-width:280px}
+.drv[hidden]{display:none}
+.dq{font-style:italic;color:var(--text)!important;border-left:2px solid var(--gold);padding-left:14px}
+
+.dmeta li.dz{align-items:flex-start}.dz>div{flex:1}
+.dzl{font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tags span{background:rgba(233,185,73,.1);border:1px solid var(--line);color:var(--gold2);font-size:.72rem;font-weight:600;padding:4px 11px;border-radius:50px}
+.credit{color:var(--gold);font-weight:600;transition:color .3s}.credit:hover{color:var(--gold2);text-decoration:underline}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<a href="#inicio" class="skip">Saltar al contenido</a>
+
+<nav id="nav"><div class="wrap nav-in">
+  <a href="#inicio" class="brand"><img decoding="async" src="img/yasi-isotipo.png" alt="Yasí Travel"><span><b>YASÍ</b><small>TRAVEL</small></span></a>
+  <ul class="links">
+    <li><a href="#servicios" data-i="n1">Servicios</a></li>
+    <li><a href="#flota" data-i="n2">Vehículo</a></li>
+    <li><a href="#choferes" data-i="n6">Choferes</a></li>
+    <li><a href="#paquetes" data-i="n3">Paquetes</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#ubicacion" data-i="n5">Ubicación</a></li>
+  </ul>
+  <div class="nav-r">
+    <div class="lang"><button class="on" data-l="es">ES</button><button data-l="pt">PT</button><button data-l="en">EN</button></div>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  </div>
+</div></nav>
+<div class="mnav" id="mnav">
+  <a href="#servicios" data-i="n1">Servicios</a><a href="#flota" data-i="n2">Vehículo</a><a href="#choferes" data-i="n6">Choferes</a><a href="#paquetes" data-i="n3">Paquetes</a>
+  <a href="#faq">FAQ</a><a href="#ubicacion" data-i="n5">Ubicación</a>
+  <div class="mlang"><button class="on" data-l="es">ES</button><button data-l="pt">PT</button><button data-l="en">EN</button></div>
+</div>
+
+<header class="hero" id="inicio">
+  <div class="hero-bg"><img decoding="async" src="img/cataratas-3.webp" alt="" fetchpriority="high"></div>
+  <span class="orb o1"></span><span class="orb o2"></span>
+  <div class="wrap"><div class="hero-in">
+    <span class="eyebrow" data-i="h0">✦ Remisería · Puerto Iguazú, Misiones</span>
+    <h1><span data-i="h1a">Tu viaje comienza</span> <span class="gold" data-i="h1b">con nosotros</span></h1>
+    <p data-i="h2">Traslados, viajes urbanos y excursiones por la Triple Frontera, con conductor profesional, confort y puntualidad garantizada.</p>
+    <div class="hero-cta">
+      <a href="#armar" class="btn btn-gold" data-i="hc1">Armá tu paquete</a>
+      <a href="#paquetes" class="btn btn-line" data-i="hc2">Ver paquetes</a>
+    </div>
+    <div class="chips">
+      <span class="chip"><span class="dot"></span><span data-i="c1">Atención 24/7</span></span>
+      <span class="chip"><i>✈</i><span data-i="c2">Seguimiento de vuelos</span></span>
+      <span class="chip"><i>🌎</i><span data-i="c3">AR · BR · PY</span></span>
+    </div>
+  </div></div>
+  <a href="#servicios" class="cue" aria-label="Bajar"><span></span></a>
+</header>
+
+<div class="strip"><div class="wrap strip-g">
+  <div class="st rv"><b class="gold">24/7</b><span data-i="s1">Disponibilidad</span></div>
+  <div class="st rv"><b class="gold">3</b><span data-i="s2">Países que cubrimos</span></div>
+  <div class="st rv"><b class="gold">✈</b><span data-i="s3">Aeropuertos IGR e IGU</span></div>
+  <div class="st rv"><b class="gold">★</b><span data-i="s4">Conductor profesional</span></div>
+</div></div>
+
+<div class="mq" aria-hidden="true"><div class="mq-t"><span>Cataratas del Iguazú</span><span>Triple Frontera</span><span>Foz do Iguaçu</span><span>Parque das Aves</span><span>Ciudad del Este</span><span>Minas de Wanda</span><span>Saltos del Moconá</span><span>Aeropuerto IGR</span><span>Puerto Iguazú</span><span>Cataratas del Iguazú</span><span>Triple Frontera</span><span>Foz do Iguaçu</span><span>Parque das Aves</span><span>Ciudad del Este</span><span>Minas de Wanda</span><span>Saltos del Moconá</span><span>Aeropuerto IGR</span><span>Puerto Iguazú</span></div></div>
+
+<section id="servicios"><div class="wrap">
+  <div class="hd rv"><span class="eyebrow" data-i="a0">Nuestros servicios</span><h2 data-i="a1">¿Qué ofrecemos?</h2><p data-i="a2">Viajes urbanos y traslados turísticos, con la calidad y puntualidad que merecés.</p></div>
+  <div class="grid4 stag">
+    <article class="svc rv"><img decoding="async" src="img/shopping-cde.webp" alt="Viajes urbanos" loading="lazy"><div><div class="ic">🚕</div><h3 data-i="v1h">Viajes urbanos</h3><p data-i="v1p">Remís al instante en Puerto Iguazú y alrededores. Pedilo por WhatsApp.</p></div></article>
+    <article class="svc rv"><img decoding="async" src="img/service-airport.webp" alt="Aeropuerto" loading="lazy"><div><div class="ic">✈️</div><h3 data-i="v2h">Traslados aeropuerto</h3><p data-i="v2p">Aeropuerto IGR, Foz do Iguaçu y Ciudad del Este, con seguimiento de vuelos.</p></div></article>
+    <article class="svc rv"><img decoding="async" src="img/cataratas-5.webp" alt="Turismo" loading="lazy"><div><div class="ic">🌿</div><h3 data-i="v3h">Turismo regional</h3><p data-i="v3p">Cataratas, selva y Triple Frontera con conductor que conoce cada rincón.</p></div></article>
+    <article class="svc rv"><img decoding="async" src="img/service-long.webp" alt="Eventos y negocios" loading="lazy"><div><div class="ic">💼</div><h3 data-i="v4h">Eventos y negocios</h3><p data-i="v4p">Viajes ejecutivos, eventos y traslados largos con total comodidad.</p></div></article>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <div class="hd rv"><span class="eyebrow" data-i="w0">Por qué elegirnos</span><h2 data-i="w1">Un viaje de primera, de punta a punta</h2></div>
+  <div class="why stag">
+    <div class="wc rv"><div class="ic">🧭</div><h3 data-i="w2h">Conductores locales</h3><p data-i="w2p">Conocemos la Triple Frontera como la palma de la mano.</p></div>
+    <div class="wc rv"><div class="ic">⏱️</div><h3 data-i="w3h">Puntualidad</h3><p data-i="w3p">Llegamos a la hora acordada, siempre. Tu tiempo vale.</p></div>
+    <div class="wc rv"><div class="ic">🛡️</div><h3 data-i="w4h">Seguridad y confianza</h3><p data-i="w4p">Vehículo en excelente estado y conductor profesional.</p></div>
+    <div class="wc rv"><div class="ic">💬</div><h3 data-i="w5h">Atención personalizada</h3><p data-i="w5p">Armamos el viaje a tu medida, hablando directo por WhatsApp.</p></div>
+    <div class="wc rv"><div class="ic">💱</div><h3 data-i="w6h">Pagá en tu moneda</h3><p data-i="w6p">Aceptamos cualquier moneda extranjera, en efectivo o por transferencia.</p></div>
+    <div class="wc rv"><div class="ic">🧩</div><h3 data-i="w7h">Tu paquete a medida</h3><p data-i="w7p">Elegí los lugares que querés conocer y armamos tu recorrido.</p></div>
+  </div>
+</div></section>
+
+<section id="flota"><div class="wrap veh">
+  <div class="rv-l">
+    <span class="eyebrow" data-i="f0">Nuestro vehículo</span>
+    <h2><span class="gold">Fiat Cronos</span> <span data-i="f1">Premium</span></h2>
+    <p data-i="f2">Un auto cómodo, impecable y equipado para que tu viaje sea una experiencia de primera clase: climatización, buen espacio y mucha tranquilidad.</p>
+    <div class="specs">
+      <div class="spec"><small data-i="f3">Modelo</small><b>Fiat Cronos 2026</b></div>
+      <div class="spec"><small data-i="f4">Climatización</small><b>A/C Dual Zone</b></div>
+      <div class="spec"><small data-i="f5">Capacidad</small><b data-i="f5v">4 pasajeros</b></div>
+      <div class="spec"><small data-i="f6">Equipaje</small><b data-i="f6v">3 valijas grandes</b></div>
+    </div>
+  </div>
+  <div class="vg rv-r">
+    <img decoding="async" src="img/hero-auto-route.webp" alt="Fiat Cronos en la ruta" loading="lazy">
+    <img decoding="async" src="img/service-local.webp" alt="Fiat Cronos de viaje" loading="lazy">
+    <img decoding="async" src="img/gallery-interior.webp" alt="Interior del Fiat Cronos" loading="lazy">
+  </div>
+</div></section>
+
+<section id="choferes"><div class="wrap">
+  <div class="hd rv"><span class="eyebrow" data-i="d0">Nuestro equipo</span><h2 data-i="d1">Conocé a tus choferes</h2><p data-i="d2">Profesionales que conocen la región y te acompañan durante todo el viaje.</p></div>
+  <div class="drivers stag">
+    <article class="drv rv">
+      <div class="dph"><span class="av">👤</span><img decoding="async" src="img/chofer-1.webp" alt="Matías Rivas" loading="lazy" onerror="this.remove()"></div>
+      <div class="dbd">
+        <h3>Matías Rivas</h3>
+        <span class="drole" data-i="d3">Conductor profesional</span>
+        <p class="dq" data-i="dq1">“Además de conocer lugares mágicos, con los pasajeros se crea un vínculo de familia, confianza y muy buena onda.”</p>
+        <ul class="dmeta"><li class="dz"><i>📍</i><div><span class="dzl" data-i="dzl">Conoce muy bien</span><div class="tags"><span data-i="lz1">Cataratas (lado argentino y brasileño)</span><span data-i="lz2">Parque das Aves</span><span data-i="lz3">Minas de Wanda</span><span data-i="lz5">Acuario (Brasil)</span><span data-i="lz6">Shoppings</span><span data-i="lz7">Aeropuerto</span><span data-i="lz8">Paraguay</span><span data-i="lz9">Tours de compras</span></div></div></li><li><i>🌐</i><span data-i="dl1">Español · Português · English (básico)</span></li></ul>
+      </div>
+    </article>
+    <article class="drv rv">
+      <div class="dph"><span class="av">👤</span><img decoding="async" src="img/chofer-2.webp" alt="Carlos Rivas" loading="lazy" onerror="this.remove()"></div>
+      <div class="dbd">
+        <h3>Carlos Rivas</h3>
+        <span class="drole" data-i="d3">Conductor profesional</span>
+        <p class="dq" data-i="dq2">“Mi objetivo es que cada pasajero se sienta como en casa y disfrute el viaje de principio a fin.”</p>
+        <ul class="dmeta"><li class="dz"><i>📍</i><div><span class="dzl" data-i="dzl">Conoce muy bien</span><div class="tags"><span data-i="lz1">Cataratas (lado argentino y brasileño)</span><span data-i="lz4">Iguazú</span><span data-i="lz3">Minas de Wanda</span><span data-i="lz5">Acuario (Brasil)</span><span data-i="lz6">Shoppings</span><span data-i="lz7">Aeropuerto</span><span data-i="lz8">Paraguay</span><span data-i="lz9">Tours de compras</span></div></div></li><li><i>🌐</i><span data-i="dl2">Español · Português</span></li></ul>
+      </div>
+    </article>
+  </div>
+</div></section>
+
+<section class="alt" id="paquetes"><div class="wrap">
+  <div class="hd rv"><span class="eyebrow" data-i="p0">Paquetes turísticos</span><h2 data-i="p1">Descubrí la región</h2><p data-i="p2">Excursiones con traslado privado. Escribinos y las armamos a tu ritmo.</p></div>
+  <div class="pkgs stag">
+    <article class="pk rv"><div class="th slides"><img decoding="async" class="sl" src="img/cataratas.webp" alt="Cataratas del Iguazú" loading="lazy"><img decoding="async" class="sl" src="img/cataratas-6.webp" alt="Cataratas del Iguazú" loading="lazy"><img decoding="async" class="sl" src="img/cataratas-4.webp" alt="Cataratas del Iguazú" loading="lazy"><span class="tag" data-i="t1">Día completo</span></div><div class="bd"><h3 data-i="k1h">Cataratas del Iguazú</h3><p data-i="k1p">Lado argentino y brasileño, con traslado puerta a puerta.</p><button data-pk="Cataratas del Iguazú" data-i="rs">Reservar</button></div></article>
+    <article class="pk rv"><div class="th slides"><img decoding="async" class="sl" src="img/parque-das-aves7.webp" alt="Parque das Aves" loading="lazy"><img decoding="async" class="sl" src="img/entrada-parque-das-aves.webp" alt="Parque das Aves" loading="lazy"><span class="tag" data-i="t2">Medio día</span></div><div class="bd"><h3 data-i="k5h">Parque das Aves</h3><p data-i="k5p">Un paseo entre aves tropicales en plena selva, en Foz do Iguaçu (Brasil).</p><button data-pk="Parque das Aves (Foz do Iguaçu)" data-i="rs">Reservar</button></div></article>
+    <article class="pk rv"><div class="th"><img decoding="async" src="img/package-puerto-noche-1.webp" alt="Triple Frontera" loading="lazy"><span class="tag" data-i="t2">Medio día</span></div><div class="bd"><h3 data-i="k2h">Triple Frontera</h3><p data-i="k2p">Hito de las Tres Fronteras y recorrido por tres países.</p><button data-pk="Triple Frontera" data-i="rs">Reservar</button></div></article>
+    <article class="pk rv"><div class="th"><img decoding="async" src="img/minas-wanda.webp" alt="Minas de Wanda" loading="lazy"><span class="tag" data-i="t2">Medio día</span></div><div class="bd"><h3 data-i="k3h">Minas de Wanda</h3><p data-i="k3p">Piedras preciosas y paisajes únicos de Misiones.</p><button data-pk="Minas de Wanda" data-i="rs">Reservar</button></div></article>
+    <article class="pk rv"><div class="th slides"><img decoding="async" class="sl" src="img/mocona.webp" alt="Saltos del Moconá" loading="lazy"><img decoding="async" class="sl" src="img/mocona-2.webp" alt="Saltos del Moconá" loading="lazy"><img decoding="async" class="sl" src="img/mocona-3.webp" alt="Saltos del Moconá" loading="lazy"><img decoding="async" class="sl" src="img/mocona-4.webp" alt="Saltos del Moconá" loading="lazy"><span class="tag" data-i="t1">Día completo</span></div><div class="bd"><h3 data-i="k4h">Saltos del Moconá</h3><p data-i="k4p">Una de las maravillas naturales de Misiones.</p><button data-pk="Saltos del Moconá" data-i="rs">Reservar</button></div></article>
+  </div>
+
+  <div class="bq rv"><a href="#armar" class="btn btn-line" data-i="bq">Armá tu propio paquete</a></div>
+
+  <div class="hd rv bld-hd" id="armar"><span class="eyebrow" data-i="b0">A tu medida</span><h2 data-i="b1">Armá tu propio paquete</h2><p data-i="b2">Elegí los lugares que querés conocer y te armamos el recorrido.</p></div>
+  <div class="bld">
+    <div class="panel rv-l">
+      <h3 data-i="b3">¿Qué querés conocer?</h3><p data-i="b4">Tocá todos los que quieras.</p>
+      <div class="chsel">
+        <button type="button" class="ch" data-v="Cataratas (lado argentino)" aria-pressed="false"><span class="ci">🌊</span><span data-i="ch1">Cataratas (lado argentino)</span><i class="ck">✓</i></button>
+        <button type="button" class="ch" data-v="Cataratas (lado brasileño)" aria-pressed="false"><span class="ci">💦</span><span data-i="ch2">Cataratas (lado brasileño)</span><i class="ck">✓</i></button>
+        <button type="button" class="ch" data-v="Parque das Aves" aria-pressed="false"><span class="ci">🦜</span><span data-i="ch3">Parque das Aves</span><i class="ck">✓</i></button>
+        <button type="button" class="ch" data-v="Hito de las Tres Fronteras" aria-pressed="false"><span class="ci">📍</span><span data-i="ch4">Hito de las Tres Fronteras</span><i class="ck">✓</i></button>
+        <button type="button" class="ch" data-v="Represa de Itaipú" aria-pressed="false"><span class="ci">⚡</span><span data-i="ch5">Represa de Itaipú</span><i class="ck">✓</i></button>
+        <button type="button" class="ch" data-v="Compras en Ciudad del Este" aria-pressed="false"><span class="ci">🛍️</span><span data-i="ch6">Compras en Ciudad del Este</span><i class="ck">✓</i></button>
+        <button type="button" class="ch" data-v="Minas de Wanda" aria-pressed="false"><span class="ci">💎</span><span data-i="ch7">Minas de Wanda</span><i class="ck">✓</i></button>
+        <button type="button" class="ch" data-v="Saltos del Moconá" aria-pressed="false"><span class="ci">🌿</span><span data-i="ch8">Saltos del Moconá</span><i class="ck">✓</i></button>
+        <button type="button" class="ch" data-v="Güirá Oga (Puerto Iguazú)" aria-pressed="false"><span class="ci">🐒</span><span data-i="ch9">Güirá Oga (Puerto Iguazú)</span><i class="ck">✓</i></button>
+        <button type="button" class="ch" data-v="Ruinas de San Ignacio" aria-pressed="false"><span class="ci">🏛️</span><span data-i="ch10">Ruinas de San Ignacio</span><i class="ck">✓</i></button>
+        <button type="button" class="ch ot" data-v="Otro" data-other="1" aria-pressed="false"><span class="ci">✏️</span><span data-i="ch11">Otro lugar (escribilo)</span><i class="ck">✓</i></button>
+      </div>
+      <div class="oth-wrap" id="othwrap"><div><div class="fg" style="margin:0"><input type="text" id="botro" data-ph="qph4" placeholder="Contanos a dónde querés ir" maxlength="160"></div></div></div>
+    </div>
+    <div class="panel bsum rv-r">
+      <h3 data-i="b5">Tu paquete</h3>
+      <div class="bcount"><b class="gold" id="bcnt">0</b><span data-i="b8">lugares elegidos</span></div>
+      <div class="blist" id="blist"></div>
+      <p class="bempty" id="bempty" data-i="b6">Todavía no elegiste ningún lugar.</p>
+      <div class="row2">
+        <div class="fg"><label data-i="b7">Duración</label><select id="bdur"><option data-v="Medio día" data-i="b7a">Medio día</option><option data-v="Día completo" data-i="b7b" selected>Día completo</option><option data-v="2 días o más" data-i="b7c">2 días o más</option><option data-v="A definir" data-i="b7d">A definir</option></select></div>
+        <div class="fg"><label data-i="qp">Pasajeros</label><select id="bpax"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option><option value="5 o más" data-i="b10">5 o más</option></select></div>
+      </div>
+      <div class="fg"><label data-i="qf">Fecha</label><input type="date" id="bdate"></div>
+      <div class="fg"><label data-i="qc">Comentarios (opcional)</label><input type="text" id="bnote" data-ph="qph3" placeholder="Horario, vuelo, equipaje extra…"></div>
+      <a id="bsend" class="wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.05 21.78a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg><span data-i="b9">Pedir mi paquete por WhatsApp</span></a>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="hd rv"><span class="eyebrow" data-i="g0">Galería</span><h2 data-i="g1">Un destino para recordar</h2></div>
+  <div class="gal rv-z">
+    <button><img decoding="async" src="img/gallery-cataratas-panorama.webp" alt="Panorama de las Cataratas" loading="lazy"></button>
+    <button><img decoding="async" src="img/cataratas-2.webp" alt="Cataratas del Iguazú" loading="lazy"></button>
+    <button><img decoding="async" src="img/contact-cataratas.webp" alt="Cataratas del Iguazú" loading="lazy"></button>
+    <button><img decoding="async" src="img/mocona-2.webp" alt="Saltos del Moconá" loading="lazy"></button>
+    <button><img decoding="async" src="img/cataratas-4.webp" alt="Cataratas del Iguazú" loading="lazy"></button>
+    <button><img decoding="async" src="img/entrada-parque-das-aves.webp" alt="Entrada al Parque das Aves" loading="lazy"></button>
+    <button><img decoding="async" src="img/mocona-3.webp" alt="Saltos del Moconá" loading="lazy"></button>
+    <button><img decoding="async" src="img/mocona-4.webp" alt="Tirolesa en el Moconá" loading="lazy"></button>
+    <button><img decoding="async" src="img/package-ruinas-1.webp" alt="Ruinas de San Ignacio" loading="lazy"></button>
+    <button><img decoding="async" src="img/shopping-foz.webp" alt="El auto en Foz do Iguaçu" loading="lazy"></button>
+  </div>
+</div></section>
+<div class="lb" id="lb"><img decoding="async" alt=""><button class="lbn lbp" aria-label="Anterior">‹</button><button class="lbn lbx" aria-label="Siguiente">›</button><button class="lbc2" aria-label="Cerrar">✕</button><span class="lbc"></span></div>
+
+<section class="alt" id="faq"><div class="wrap">
+  <div class="hd rv"><span class="eyebrow" data-i="y0">Preguntas frecuentes</span><h2 data-i="y1">¿Tenés dudas?</h2></div>
+  <div class="faq rv">
+    <div class="fi"><button class="fq" aria-expanded="false"><span data-i="y2q">¿Qué medios de pago aceptan?</span><i>+</i></button><div class="fa"><p data-i="y2a">Aceptamos pagos en cualquier moneda extranjera, tanto en efectivo como por transferencia.</p></div></div>
+    <div class="fi"><button class="fq" aria-expanded="false"><span data-i="y3q">¿Viajan a Foz do Iguaçu o Ciudad del Este?</span><i>+</i></button><div class="fa"><p data-i="y3a">Sí, cubrimos toda la Triple Frontera: Puerto Iguazú, Foz do Iguaçu (Brasil) y Ciudad del Este (Paraguay).</p></div></div>
+    <div class="fi"><button class="fq" aria-expanded="false"><span data-i="y4q">¿Con cuánta anticipación debo reservar?</span><i>+</i></button><div class="fa"><p data-i="y4a">Para viajes urbanos podés pedirlo al instante. Para aeropuerto o excursiones, recomendamos avisar con algunas horas de anticipación.</p></div></div>
+    <div class="fi"><button class="fq" aria-expanded="false"><span data-i="y5q">¿Hacen viajes largos?</span><i>+</i></button><div class="fa"><p data-i="y5a">Sí, coordinamos viajes dentro y fuera de Misiones. Escribinos y confirmamos disponibilidad y tarifa.</p></div></div>
+    <div class="fi"><button class="fq" aria-expanded="false"><span data-i="y6q">¿Atienden las 24 horas?</span><i>+</i></button><div class="fa"><p data-i="y6a">Sí, estamos disponibles las 24 horas, los 7 días de la semana.</p></div></div>
+    <div class="fi"><button class="fq" aria-expanded="false"><span data-i="y7q">¿Puedo armar mi propio paquete turístico?</span><i>+</i></button><div class="fa"><p data-i="y7a">Sí. En la sección Paquetes elegí los lugares que querés conocer y te armamos el recorrido a tu medida por WhatsApp.</p></div></div>
+  </div>
+</div></section>
+
+<section id="ubicacion"><div class="wrap">
+  <div class="hd rv"><span class="eyebrow" data-i="u0">Dónde estamos</span><h2 data-i="u1">Encontranos en Puerto Iguazú</h2></div>
+  <div class="map rv-z">
+    <iframe id="mapf" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Yasí Travel"></iframe>
+    <div class="inf">
+      <div><span>📍</span><span>RN12 km 4.5, N3370 Puerto Iguazú, Misiones</span></div>
+      <div><span>📱</span><a href="https://wa.me/5493757680410" target="_blank" rel="noopener">+54 9 3757 680410</a></div>
+      <div><span>🕐</span><span data-i="u2">Atención 24 horas, todos los días</span></div>
+      <a class="btn btn-line" style="align-self:flex-start" target="_blank" rel="noopener" href="https://maps.app.goo.gl/KosE2qUoPKR19SUw8" data-i="u3">Cómo llegar</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="cta" id="contacto">
+  <img decoding="async" src="img/hero-auto-route.webp" alt="" loading="lazy">
+  <div class="wrap rv">
+    <img decoding="async" class="lg" src="img/yasi-isotipo.png" alt="Yasí Travel">
+    <h2><span data-i="z1">¿Listo para</span> <span class="gold" data-i="z2">viajar?</span></h2>
+    <p data-i="z3">Escribinos por WhatsApp y reservá tu traslado en menos de 2 minutos. ¡Respondemos al instante!</p>
+    <a class="btn btn-gold" target="_blank" rel="noopener" href="https://wa.me/5493757680410?text=Hola%20Yas%C3%AD%20Travel!%20Quiero%20reservar%20un%20traslado." data-i="z4">Chatear por WhatsApp</a>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="fg3 stag">
+    <div class="rv"><div class="bt"><img decoding="async" src="img/yasi-isotipo.png" alt=""><span><b style="font:900 1.3rem 'Playfair Display',serif;letter-spacing:2px">YASÍ</b><small style="display:block;font-size:.55rem;letter-spacing:5px;color:var(--gold)">TRAVEL</small></span></div><p class="desc" data-i="r1">Remisería y traslados en Puerto Iguazú y la Triple Frontera. Tu viaje comienza con nosotros.</p></div>
+    <div class="rv"><h4 data-i="r2">Navegación</h4><ul><li><a href="#servicios" data-i="n1">Servicios</a></li><li><a href="#flota" data-i="n2">Vehículo</a></li><li><a href="#paquetes" data-i="n3">Paquetes</a></li></ul></div>
+    <div class="rv"><h4 data-i="r3">Contacto</h4><ul><li><a href="https://wa.me/5493757680410" target="_blank" rel="noopener">📱 +54 9 3757 680410</a></li><li>📍 RN12 km 4.5, N3370 Puerto Iguazú, Misiones</li></ul></div>
+  </div>
+  <p class="copy">© 2026 Yasí Travel. <span data-i="r4">Todos los derechos reservados.</span> · <span data-i="r5">Diseñada por</span> <a class="credit" href="https://nexus-icamyafpd-nexus-dev-project.vercel.app/" target="_blank" rel="noopener">NEXUS Dev</a></p>
+</div></footer>
+
+<button id="top" aria-label="Volver arriba">↑</button>
+<a class="wfl" href="https://wa.me/5493757680410?text=Hola%20Yas%C3%AD%20Travel!%20Quiero%20consultar%20por%20un%20viaje." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.05 21.78a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42"/></svg></a>
+
+<script>
+const WA='5493757680410', $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+
+/* i18n: el español sale del propio HTML; solo definimos PT y EN */
+const T={
+pt:{r5:'Desenvolvido por',dzl:'Conhece muito bem',lz1:'Cataratas (lado argentino e brasileiro)',lz2:'Parque das Aves',lz3:'Minas de Wanda',lz4:'Iguazú',lz5:'Aquário (Brasil)',lz6:'Shoppings',lz7:'Aeroporto',lz8:'Paraguai',lz9:'Passeios de compras',dq2:'“Meu objetivo é que cada passageiro se sinta em casa e aproveite a viagem do começo ao fim.”',dz2:'Conhece muito bem: Cataratas (lado argentino e brasileiro) · Iguazú · Minas de Wanda',dl2:'Espanhol · Português',dq1:'“Além de conhecer lugares mágicos, com os passageiros nasce um vínculo de família, confiança e muito boa energia.”',dz1:'Conhece muito bem: Cataratas (lado argentino e brasileiro) · Parque das Aves · Minas de Wanda',dl1:'Espanhol · Português · Inglês (básico)',n6:'Motoristas',d0:'Nossa equipe',d1:'Conheça seus motoristas',d2:'Profissionais que conhecem a região e acompanham você durante toda a viagem.',d3:'Motorista profissional',ch11:'Outro lugar (escreva)',w6h:'Pague na sua moeda',w6p:'Aceitamos qualquer moeda estrangeira, em dinheiro ou por transferência.',w7h:'Seu pacote sob medida',w7p:'Escolha os lugares que quer conhecer e montamos seu roteiro.',k5h:'Parque das Aves',k5p:'Um passeio entre aves tropicais em plena selva, em Foz do Iguaçu (Brasil).',bq:'Monte seu próprio pacote',b0:'Sob medida',b1:'Monte seu próprio pacote',b2:'Escolha os lugares que quer conhecer e montamos o roteiro para você.',b3:'O que você quer conhecer?',b4:'Toque em todos que quiser.',b5:'Seu pacote',b6:'Você ainda não escolheu nenhum lugar.',b7:'Duração',b7a:'Meio dia',b7b:'Dia inteiro',b7c:'2 dias ou mais',b7d:'A definir',b8:'lugares escolhidos',b9:'Pedir meu pacote pelo WhatsApp',b10:'5 ou mais',ch1:'Cataratas (lado argentino)',ch2:'Cataratas (lado brasileiro)',ch3:'Parque das Aves',ch4:'Marco das Três Fronteiras',ch5:'Represa de Itaipu',ch6:'Compras em Ciudad del Este',ch7:'Minas de Wanda',ch8:'Saltos do Moconá',ch9:'Güirá Oga (Puerto Iguazú)',ch10:'Ruínas de San Ignacio',y7q:'Posso montar meu próprio pacote turístico?',y7a:'Sim. Na seção Pacotes escolha os lugares que quer conhecer e montamos o roteiro sob medida pelo WhatsApp.',n1:'Serviços',n2:'Veículo',n3:'Pacotes',n4:'Cotar',n5:'Localização',h0:'✦ Remisería · Puerto Iguazú, Misiones',h1a:'Sua viagem começa',h1b:'com a gente',h2:'Traslados, viagens urbanas e passeios pela Tríplice Fronteira, com motorista profissional, conforto e pontualidade garantida.',hc1:'Monte seu pacote',hc2:'Ver pacotes',c1:'Atendimento 24/7',c2:'Monitoramento de voos',s1:'Disponibilidade',s2:'Países atendidos',s3:'Aeroportos IGR e IGU',s4:'Motorista profissional',
+a0:'Nossos serviços',a1:'O que oferecemos?',a2:'Viagens urbanas e traslados turísticos, com a qualidade e pontualidade que você merece.',v1h:'Viagens urbanas',v1p:'Remís na hora em Puerto Iguazú e arredores. Peça pelo WhatsApp.',v2h:'Traslados aeroporto',v2p:'Aeroporto IGR, Foz do Iguaçu e Ciudad del Este, com monitoramento de voos.',v3h:'Turismo regional',v3p:'Cataratas, selva e Tríplice Fronteira com motorista que conhece cada canto.',v4h:'Eventos e negócios',v4p:'Viagens executivas, eventos e traslados longos com todo o conforto.',
+w0:'Por que nos escolher',w1:'Uma viagem de primeira, de ponta a ponta',w2h:'Motoristas locais',w2p:'Conhecemos a Tríplice Fronteira como a palma da mão.',w3h:'Pontualidade',w3p:'Chegamos na hora combinada, sempre. Seu tempo vale.',w4h:'Segurança e confiança',w4p:'Veículo em excelente estado e motorista profissional.',w5h:'Atendimento personalizado',w5p:'Montamos a viagem sob medida, direto pelo WhatsApp.',
+f0:'Nosso veículo',f1:'Premium',f2:'Um carro confortável, impecável e equipado para que sua viagem seja de primeira classe: climatização, bom espaço e muita tranquilidade.',f3:'Modelo',f4:'Climatização',f5:'Capacidade',f5v:'4 passageiros',f6:'Bagagem',f6v:'3 malas grandes',
+p0:'Pacotes turísticos',p1:'Descubra a região',p2:'Passeios com traslado privado. Escreva e montamos no seu ritmo.',t1:'Dia inteiro',t2:'Meio dia',k1h:'Cataratas do Iguaçu',k1p:'Lado argentino e brasileiro, com traslado porta a porta.',k2h:'Tríplice Fronteira',k2p:'Marco das Três Fronteiras e passeio por três países.',k3h:'Minas de Wanda',k3p:'Pedras preciosas e paisagens únicas de Misiones.',k4h:'Saltos do Moconá',k4p:'Uma das maravilhas naturais de Misiones.',rs:'Reservar',
+g0:'Galeria',g1:'Um destino para recordar',q0:'Cotação rápida',q1:'Cote sua viagem',q2:'Preencha os dados e respondemos na hora pelo WhatsApp.',q3:'Detalhes da viagem',q4:'Se seu destino não está na lista, escolha “Outro” e escreva.',qo:'Origem',qd:'Destino',qs:'— Escolha —',qx:'Outro (especificar)',qp:'Passageiros',qf:'Data',qc:'Comentários (opcional)',qb:'Cotar pelo WhatsApp',q5:'Resumo da sua viagem',q6:'Assim chega sua consulta ao nosso WhatsApp.',sa:'Rota',q7:'O preço final confirmamos pelo WhatsApp conforme destino e data.',
+y0:'Perguntas frequentes',y1:'Tem dúvidas?',y2q:'Quais formas de pagamento aceitam?',y2a:'Aceitamos pagamentos em qualquer moeda estrangeira, tanto em dinheiro quanto por transferência.',y3q:'Vão a Foz do Iguaçu ou Ciudad del Este?',y3a:'Sim, cobrimos toda a Tríplice Fronteira: Puerto Iguazú, Foz do Iguaçu (Brasil) e Ciudad del Este (Paraguai).',y4q:'Com quanta antecedência devo reservar?',y4a:'Para viagens urbanas pode pedir na hora. Para aeroporto ou passeios, recomendamos avisar com algumas horas.',y5q:'Fazem viagens longas?',y5a:'Sim, coordenamos viagens dentro e fora de Misiones. Escreva e confirmamos disponibilidade e tarifa.',y6q:'Atendem 24 horas?',y6a:'Sim, estamos disponíveis 24 horas, 7 dias por semana.',
+u0:'Onde estamos',u1:'Encontre-nos em Puerto Iguazú',u2:'Atendimento 24 horas, todos os dias',u3:'Como chegar',z1:'Pronto para',z2:'viajar?',z3:'Escreva pelo WhatsApp e reserve seu traslado em menos de 2 minutos. Respondemos na hora!',z4:'Conversar no WhatsApp',r1:'Remisería e traslados em Puerto Iguazú e na Tríplice Fronteira. Sua viagem começa com a gente.',r2:'Navegação',r3:'Contato',r4:'Todos os direitos reservados.',
+ph:{qph4:'Conte para onde quer ir',qph1:'Escreva o local de origem',qph2:'Escreva o local de destino',qph3:'Horário, voo, bagagem extra…'}},
+en:{r5:'Designed by',dzl:'Knows very well',lz1:'Iguazú Falls (Argentine & Brazilian sides)',lz2:'Parque das Aves',lz3:'Wanda Mines',lz4:'Iguazú',lz5:'Aquarium (Brazil)',lz6:'Shopping malls',lz7:'Airport',lz8:'Paraguay',lz9:'Shopping tours',dq2:'“My goal is for every passenger to feel at home and enjoy the trip from start to finish.”',dz2:'Knows very well: Iguazú Falls (Argentine and Brazilian sides) · Iguazú · Wanda Mines',dl2:'Spanish · Portuguese',dq1:'“Besides visiting magical places, I build a bond of family, trust and good vibes with my passengers.”',dz1:'Knows very well: Iguazú Falls (Argentine and Brazilian sides) · Parque das Aves · Wanda Mines',dl1:'Spanish · Portuguese · English (basic)',n6:'Drivers',d0:'Our team',d1:'Meet your drivers',d2:'Professionals who know the region and look after you throughout the trip.',d3:'Professional driver',ch11:'Somewhere else (type it)',w6h:'Pay in your currency',w6p:'We accept any foreign currency, in cash or by transfer.',w7h:'Your custom package',w7p:'Pick the places you want to see and we’ll build your itinerary.',k5h:'Parque das Aves',k5p:'A walk among tropical birds in the middle of the jungle, in Foz do Iguaçu (Brazil).',bq:'Build your own package',b0:'Tailor-made',b1:'Build your own package',b2:'Choose the places you want to visit and we’ll build the route for you.',b3:'What do you want to see?',b4:'Tap as many as you like.',b5:'Your package',b6:'You haven’t picked any place yet.',b7:'Duration',b7a:'Half day',b7b:'Full day',b7c:'2 days or more',b7d:'To be decided',b8:'places selected',b9:'Request my package on WhatsApp',b10:'5 or more',ch1:'Falls (Argentine side)',ch2:'Falls (Brazilian side)',ch3:'Parque das Aves',ch4:'Triple Border landmark',ch5:'Itaipu Dam',ch6:'Shopping in Ciudad del Este',ch7:'Wanda Mines',ch8:'Moconá Falls',ch9:'Güirá Oga (Puerto Iguazú)',ch10:'San Ignacio Ruins',y7q:'Can I build my own tour package?',y7a:'Yes. In the Packages section pick the places you want to visit and we’ll tailor the route with you on WhatsApp.',n1:'Services',n2:'Vehicle',n3:'Packages',n4:'Quote',n5:'Location',h0:'✦ Taxi service · Puerto Iguazú, Misiones',h1a:'Your journey starts',h1b:'with us',h2:'Transfers, local rides and excursions across the Triple Border, with a professional driver, comfort and guaranteed punctuality.',hc1:'Build your package',hc2:'See packages',c1:'Open 24/7',c2:'Flight tracking',s1:'Availability',s2:'Countries covered',s3:'IGR & IGU airports',s4:'Professional driver',
+a0:'Our services',a1:'What we offer',a2:'Local rides and tourist transfers, with the quality and punctuality you deserve.',v1h:'Local rides',v1p:'Instant rides in Puerto Iguazú and surroundings. Request on WhatsApp.',v2h:'Airport transfers',v2p:'IGR airport, Foz do Iguaçu and Ciudad del Este, with flight tracking.',v3h:'Regional tourism',v3p:'Falls, jungle and the Triple Border with a driver who knows every corner.',v4h:'Events & business',v4p:'Executive trips, events and long transfers in total comfort.',
+w0:'Why choose us',w1:'A first-class trip, door to door',w2h:'Local drivers',w2p:'We know the Triple Border like the back of our hand.',w3h:'Punctuality',w3p:'We arrive at the agreed time, always. Your time matters.',w4h:'Safety & trust',w4p:'Vehicle in excellent condition and a professional driver.',w5h:'Personal attention',w5p:'We tailor your trip, talking directly on WhatsApp.',
+f0:'Our vehicle',f1:'Premium',f2:'A comfortable, spotless car equipped for a first-class journey: A/C, plenty of space and total peace of mind.',f3:'Model',f4:'Air conditioning',f5:'Capacity',f5v:'4 passengers',f6:'Luggage',f6v:'3 large suitcases',
+p0:'Tour packages',p1:'Discover the region',p2:'Excursions with private transfer. Message us and we’ll tailor them to your pace.',t1:'Full day',t2:'Half day',k1h:'Iguazú Falls',k1p:'Argentine and Brazilian sides, with door-to-door transfer.',k2h:'Triple Border',k2p:'The Three Borders landmark and a tour across three countries.',k3h:'Wanda Mines',k3p:'Gemstones and unique landscapes of Misiones.',k4h:'Moconá Falls',k4p:'One of the natural wonders of Misiones.',rs:'Book',
+g0:'Gallery',g1:'A destination to remember',q0:'Quick quote',q1:'Quote your trip',q2:'Fill in the details and we’ll reply instantly on WhatsApp.',q3:'Trip details',q4:'If your destination isn’t listed, choose “Other” and type it.',qo:'Origin',qd:'Destination',qs:'— Select —',qx:'Other (specify)',qp:'Passengers',qf:'Date',qc:'Comments (optional)',qb:'Quote on WhatsApp',q5:'Your trip summary',q6:'This is how your request reaches our WhatsApp.',sa:'Route',q7:'We’ll confirm the final price on WhatsApp based on destination and date.',
+y0:'FAQ',y1:'Got questions?',y2q:'What payment methods do you accept?',y2a:'We accept payment in any foreign currency, both in cash and by bank transfer.',y3q:'Do you go to Foz do Iguaçu or Ciudad del Este?',y3a:'Yes, we cover the whole Triple Border: Puerto Iguazú, Foz do Iguaçu (Brazil) and Ciudad del Este (Paraguay).',y4q:'How far ahead should I book?',y4a:'Local rides can be requested instantly. For airport or excursions, we recommend a few hours’ notice.',y5q:'Do you do long trips?',y5a:'Yes, we arrange trips within and outside Misiones. Message us for availability and rate.',y6q:'Are you open 24 hours?',y6a:'Yes, we’re available 24 hours a day, 7 days a week.',
+u0:'Where we are',u1:'Find us in Puerto Iguazú',u2:'Open 24 hours, every day',u3:'Get directions',z1:'Ready to',z2:'travel?',z3:'Message us on WhatsApp and book your transfer in under 2 minutes. We reply instantly!',z4:'Chat on WhatsApp',r1:'Taxi service and transfers in Puerto Iguazú and the Triple Border. Your journey starts with us.',r2:'Navigation',r3:'Contact',r4:'All rights reserved.',
+ph:{qph4:'Tell us where you want to go',qph1:'Type the origin',qph2:'Type the destination',qph3:'Time, flight, extra luggage…'}}
+};
+const ES={}; $$('[data-i]').forEach(el=>{ES[el.dataset.i]??=el.innerHTML});
+const ESph={}; $$('[data-ph]').forEach(el=>{ESph[el.dataset.ph]=el.placeholder});
+function setLang(l){
+  document.documentElement.lang=l;
+  $$('[data-i]').forEach(el=>{const k=el.dataset.i; el.innerHTML=(l==='es'?ES[k]:(T[l][k]??ES[k]))});
+  $$('[data-ph]').forEach(el=>{const k=el.dataset.ph; el.placeholder=l==='es'?ESph[k]:(T[l].ph[k]??ESph[k])});
+  $$('[data-l]').forEach(b=>b.classList.toggle('on',b.dataset.l===l));
+  if(typeof bupd==='function')bupd();
+}
+$$('[data-l]').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.l)));
+
+/* nav */
+const nav=$('#nav'); 
+const burger=$('#burger'), mnav=$('#mnav');
+const setMenu=o=>{mnav.classList.toggle('open',o);burger.setAttribute('aria-expanded',o);burger.textContent=o?'✕':'☰'};
+burger.addEventListener('click',()=>setMenu(!mnav.classList.contains('open')));
+mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+
+/* reveal + stagger */
+$$('.stag').forEach(g=>g.querySelectorAll(':scope>.rv').forEach((el,i)=>el.style.transitionDelay=Math.min(i*60,240)+'ms'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+$$('.rv,.rv-l,.rv-r,.rv-z').forEach(el=>io.observe(el));
+
+$$('[data-pk]').forEach(b=>b.addEventListener('click',()=>window.open('https://wa.me/'+WA+'?text='+encodeURIComponent('Hola Yasí Travel! Quiero reservar el paquete: '+b.dataset.pk+'.'),'_blank','noopener')));
+
+/* FAQ */
+$$('.fq').forEach(b=>b.addEventListener('click',()=>{
+  const it=b.closest('.fi'), was=it.classList.contains('open');
+  $$('.fi.open').forEach(x=>{x.classList.remove('open');x.querySelector('.fq').setAttribute('aria-expanded','false')});
+  if(!was){it.classList.add('open');b.setAttribute('aria-expanded','true')}
+}));
+
+/* lightbox */
+const lb=$('#lb'), lbi=lb.querySelector('img'), gb=[...$$('.gal button')]; let gi=0;
+const setG=n=>{gi=(n+gb.length)%gb.length;const im=gb[gi].querySelector('img');lbi.src=im.src;lbi.alt=im.alt;$('.lbc').textContent=(gi+1)+' / '+gb.length};
+const swapG=n=>{lbi.classList.add('sw');setTimeout(()=>{setG(n);lbi.classList.remove('sw')},200)};
+gb.forEach((b,i)=>b.addEventListener('click',()=>{setG(i);lb.classList.add('open')}));
+lb.addEventListener('click',e=>{if(e.target.closest('.lbp'))swapG(gi-1);else if(e.target.closest('.lbx'))swapG(gi+1);else lb.classList.remove('open')});
+addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')lb.classList.remove('open');if(e.key==='ArrowLeft')swapG(gi-1);if(e.key==='ArrowRight')swapG(gi+1)});
+let tx0=0;lb.addEventListener('touchstart',e=>{tx0=e.touches[0].clientX},{passive:true});
+lb.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-tx0;if(Math.abs(dx)>50)swapG(gi+(dx<0?1:-1))});
+
+/* scroll unificado y liviano (una sola lectura por frame) */
+const bar=$('#bar'), topb=$('#top'); let maxS=1,tk=false;
+const calcMax=()=>{maxS=Math.max(1,document.documentElement.scrollHeight-innerHeight)};
+calcMax(); addEventListener('resize',calcMax); addEventListener('load',calcMax);
+if('ResizeObserver' in window)new ResizeObserver(calcMax).observe(document.body);
+function onScroll(){tk=false;const y=scrollY;bar.style.transform='scaleX('+Math.min(1,y/maxS)+')';nav.classList.toggle('sc',y>40);topb.classList.toggle('show',y>700)}
+addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
+
+/* spotlight dorado que sigue al mouse */
+$$('.wc,.pk,.panel,.spec,.fi,.drv').forEach(e=>e.classList.add('spot'));
+let spE=null,spT=false;
+document.addEventListener('pointermove',e=>{spE=e;if(spT)return;spT=true;requestAnimationFrame(()=>{spT=false;const c=spE.target.closest&&spE.target.closest('.spot');
+  if(c){const r=c.getBoundingClientRect();c.style.setProperty('--mx',(spE.clientX-r.left)+'px');c.style.setProperty('--my',(spE.clientY-r.top)+'px');}})},{passive:true});
+
+/* menú: resalta la sección visible */
+const navA=[...$$('.links a')];
+const setAct=id=>navA.forEach(a=>a.classList.toggle('act',a.getAttribute('href')==='#'+id));
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)setAct(e.target.matches('.hero')?'':e.target.id)}),{rootMargin:'-40% 0px -55% 0px'});
+$$('section[id], .hero').forEach(s=>so.observe(s));
+
+/* accesibilidad galería */
+$$('.gal button').forEach(b=>b.setAttribute('aria-label',b.querySelector('img').alt));
+
+/* armador de paquete -> WhatsApp */
+const chips=[...$$('.ch')], bdur=$('#bdur'), bpax=$('#bpax'), bdate=$('#bdate'), bnote=$('#bnote');
+chips.forEach(ch=>ch.addEventListener('click',()=>{const on=ch.classList.toggle('on');ch.setAttribute('aria-pressed',on);
+  if(ch.dataset.other){$('#othwrap').classList.toggle('open',on);if(on)setTimeout(()=>$('#botro').focus(),350);}
+  bupd();}));
+[bdur,bpax,bdate,bnote,$('#botro')].forEach(e=>e.addEventListener('input',bupd));
+function bupd(){
+  const sel=chips.filter(x=>x.classList.contains('on'));
+  $('#bcnt').textContent=sel.length;
+  const ot=$('#botro').value.trim(), nm=x=>x.dataset.other?('Otro'+(ot?': '+ot:'')):x.dataset.v;
+  const box=$('#blist'); box.innerHTML='';
+  sel.forEach(x=>{const s=document.createElement('span');s.className='pill';s.textContent=x.querySelector('[data-i]').textContent.replace(/\s*\(.*\)\s*$/,x.dataset.other?'':'$&')+(x.dataset.other&&ot?': '+ot:'');box.appendChild(s)});
+  $('#bempty').style.display=sel.length?'none':'block';
+  const fd=bdate.value?bdate.value.split('-').reverse().join('/'):'', n=bnote.value.trim();
+  let m='Hola Yasí Travel! Quiero armar mi propio paquete turístico:\n• Lugares: '+(sel.map(nm).join(', ')||'A definir')+'\n• Duración: '+bdur.options[bdur.selectedIndex].dataset.v+'\n• Pasajeros: '+bpax.value;
+  if(fd)m+='\n• Fecha: '+fd; if(n)m+='\n• Comentarios: '+n;
+  $('#bsend').href='https://wa.me/'+WA+'?text='+encodeURIComponent(m);
+}
+bdate.min=new Date().toISOString().split('T')[0];
+
+$('#top').addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+
+/* pase automático de fotos (desfasado entre tarjetas) */
+$$('.slides').forEach((th,k)=>{
+  const im=[...th.querySelectorAll('.sl')]; if(im.length<2)return;
+  const dots=document.createElement('div'); dots.className='dots';
+  im.forEach(()=>dots.appendChild(document.createElement('i'))); th.appendChild(dots);
+  let i=0; im[0].classList.add('on'); dots.children[0].classList.add('on');
+  const go=n=>{im[i].classList.remove('on');dots.children[i].classList.remove('on');i=n;im[i].classList.add('on');dots.children[i].classList.add('on')};
+  setInterval(()=>{ if(!document.hidden) go((i+1)%im.length) },3300+k*700);
+});
+
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* onda al hacer clic en botones */
+document.addEventListener('click',e=>{
+  const t=e.target.closest&&e.target.closest('.btn,.wa,.pk button'); if(!t||RM)return;
+  const r=t.getBoundingClientRect(),d=Math.max(r.width,r.height)*2.2,s=document.createElement('span');
+  s.className='rip';s.style.cssText='width:'+d+'px;height:'+d+'px;left:'+(e.clientX-r.left-d/2)+'px;top:'+(e.clientY-r.top-d/2)+'px';
+  t.appendChild(s);setTimeout(()=>s.remove(),800);
+});
+
+/* mapa: se ve más alejado en celular (para usar tu mapa exacto, pegá acá la URL del iframe de "Insertar un mapa") */
+const MAP_EMBED='';
+(function(){const f=$('#mapf');if(!f)return;const z=matchMedia('(max-width:700px)').matches?13:15;
+  f.src=MAP_EMBED?MAP_EMBED:'https://www.google.com/maps?q=-25.622035721460172,-54.55271446479825&z='+z+'&output=embed';})();
+
+bupd();
+</script>
+</body>
+</html>
