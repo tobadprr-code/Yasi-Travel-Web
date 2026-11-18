@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ */
+/* Base                                                                */
+/* ------------------------------------------------------------------ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  html,
+  body {
+    background-color: #040a1a;
+    color: #f2f4fa;
+  }
+  body {
+    overflow-x: clip;
+    -webkit-tap-highlight-color: transparent;
+  }
+  ::selection {
+    background: #e9b949;
+    color: #1a1203;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  :focus-visible {
+    outline: 2px solid #e9b949;
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #040a1a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #102148;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b8862b;
+  }
+  /* Controles nativos (date/time/select) en modo oscuro */
+  input,
+  select,
+  textarea {
+    color-scheme: dark;
+  }
+}
+
+/* Movimiento reducido: todo instantáneo, nada se mueve solo */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Las animaciones en loop se pausan cuando su bloque no está en pantalla
+   (ver components/ui/InView.tsx). */
+[data-inview="false"],
+[data-inview="false"] *,
+[data-inview="false"] *::before,
+[data-inview="false"] *::after {
+  animation-play-state: paused !important;
+}
+
+/* ------------------------------------------------------------------ */
+/* Componentes                                                         */
+/* ------------------------------------------------------------------ */
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-page px-5 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2.5 text-[12px] font-semibold uppercase tracking-[0.2em] text-gold;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply h-px w-6 bg-gold/70;
+  }
+
+  /* Palabra destacada dentro de un título: serif itálica dorada */
+  em.accent {
+    @apply font-serif font-medium;
+    font-style: italic;
+    background: linear-gradient(100deg, #b8862b, #f7d774 45%, #e9b949 70%, #b8862b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding-right: 0.05em;
+  }
+
+  .card {
+    @apply rounded-3xl border border-white/[0.08] bg-navy-3/80;
+  }
+
+  .btn {
+    @apply relative inline-flex h-12 items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 text-[15px] font-semibold transition duration-200 ease-out active:scale-[0.98];
+  }
+  .btn-sm {
+    @apply h-10 px-4 text-sm;
+  }
+  .btn-gold {
+    @apply overflow-hidden text-gold-ink shadow-gold;
+    background: linear-gradient(135deg, #f7d774, #e9b949 55%, #d9a63a);
+  }
+  .btn-gold::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, transparent 25%, rgba(255, 255, 255, 0.55) 50%, transparent 75%);
+    transform: translateX(-130%);
+    transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
+  .btn-gold:hover::after {
+    transform: translateX(130%);
+  }
+  .btn-gold:hover {
+    filter: brightness(1.05);
+  }
+  .btn-outline {
+    @apply border border-white/[0.14] bg-white/[0.03] text-ink hover:border-gold/60 hover:bg-white/[0.06];
+  }
+  .btn-wa {
+    @apply bg-wa text-[#06240f] hover:brightness-105;
+    box-shadow: 0 10px 30px -12px rgba(37, 211, 102, 0.55);
+  }
+
+  .field {
+    @apply h-12 w-full rounded-xl border border-white/[0.1] bg-navy-2/80 px-3.5 text-[15px] text-ink transition-colors duration-200 placeholder:text-ink-dim hover:border-white/[0.18] focus:border-gold/70 focus:outline-none focus:ring-4 focus:ring-gold/10;
+  }
+  .field-label {
+    @apply mb-1.5 block text-[12px] font-semibold uppercase tracking-[0.14em] text-ink-muted;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/[0.1] bg-white/[0.04] px-3 py-1.5 text-[13px] font-medium text-ink;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Utilidades de movimiento                                            */
+/* ------------------------------------------------------------------ */
+
+/* Reflejo dorado que sigue al mouse (ver components/ui/spotlight.ts) */
+.spotlight {
+  position: relative;
+  isolation: isolate;
+}
+.spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  padding: 1px;
+  pointer-events: none;
+  background: radial-gradient(280px circle at var(--mx, 50%) var(--my, -40%), rgba(233, 185, 73, 0.7), transparent 65%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.spotlight::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(440px circle at var(--mx, 50%) var(--my, -40%), rgba(233, 185, 73, 0.08), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+@media (hover: hover) {
+  .spotlight:hover::before,
+  .spotlight:hover::after {
+    opacity: 1;
+  }
+}
+
+/* Marquee infinito: dos pistas idénticas que se desplazan su propio ancho */
+.marquee {
+  display: flex;
+  overflow: hidden;
+  gap: var(--gap, 1rem);
+}
+.marquee-track {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: var(--gap, 1rem);
+  animation: marquee-x var(--duration, 40s) linear infinite;
+}
+.marquee-reverse .marquee-track {
+  animation-direction: reverse;
+}
+@media (hover: hover) {
+  .marquee-pausable:hover .marquee-track {
+    animation-play-state: paused;
+  }
+}
+@keyframes marquee-x {
+  to {
+    transform: translateX(calc(-100% - var(--gap, 1rem)));
+  }
+}
+
+/* Entrada del hero: solo CSS, así el texto aparece aunque el JS tarde */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.rise {
+  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.rise-1 { animation-delay: 0.05s; }
+.rise-2 { animation-delay: 0.15s; }
+.rise-3 { animation-delay: 0.25s; }
+.rise-4 { animation-delay: 0.35s; }
+.rise-5 { animation-delay: 0.45s; }
+
+/* Zoom lento de la foto del hero */
+@keyframes slow-zoom {
+  from { transform: scale(1.04); }
+  to { transform: scale(1.12); }
+}
+.slow-zoom {
+  animation: slow-zoom 28s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Punto "en línea" */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.blink {
+  animation: blink 2.2s ease-in-out infinite;
+}
+
+/* Ocultar scrollbar en carruseles con scroll-snap */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
